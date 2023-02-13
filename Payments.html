@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+
+<title>Payment</title>
+<html lang="en">
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles/style.css">
+<header>
+    <h2>Payment</h2>
+</header>
+
+<script src="groupProject1.js"></script>
+
+<body>
+    <nav id="tablet-desktop">
+        <div id="Menu-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="menu.html">Menu</a></li>
+        </div>
+    </nav>
+    <br>
+    <main>
+            <!--Choosing how to pay for the meal-->
+        <div id="money">
+            <h3>How will you be paying for your meal?</h3>
+                        
+            Card <input type="radio" id="payment1" value="payment1" name="action" onclick="groupProject1:cardCash();">
+            Cash <input type="radio" id="payment2" value="payment2" name="action" onclick="groupProject1:cardCash();">
+            <br>
+            <div id="ifYes" style="visibility:hidden">
+                Full Name: <input type='text' id='yes' name='yes' required><br>
+                Card Number:  <input type='text' id='acc' name='acc' required><br>
+                Experation date: <input type="text" id="date" name="date" required><br>
+                Security code: <input type="text" id="code" name="code" required>
+
+                        
+            </div>
+        </div>
+        <br>
+
+        <!--Tip selection-->
+
+        <select id="services">
+
+            <h2>Add a tip</h2>
+            <option selected disabled hidden>Select a tip</option>
+            <option value="0.25">25%</option>
+            <option value="0.20">20%</option>
+            <option value="0.15">15%</option>
+            <option value="0.10">10%</option>
+            <option value="0.05">5%</option>
+            <option value="0">0</option>
+        </select>
+
+
+        <button id="calculate">Calculate</button>
+        </div>
+
+        <div class="tip">
+  
+
+
+<p>Total ammount + taxes</p>
+
+
+
+        <span id="total">$</span>
+        </div>
+    </div>
+
+    <!--Form for filling out personal infomation-->
+            
+        <br>
+        <div id="form">
+            <form class="form-grid"><!--Start form-->
+
+                <fieldset>
+                    <legend>Customer information:</legend>
+                    <label for="fName">First Name</label>
+                    <input type="text" id="fName" required>
+
+                    <label for="lName">Last Name:</label>
+                    <input type="text" id="lName" required>
+
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" id="phone" required>
+                </fieldset>
+
+                <input type="submit" id="submit" value="submit" class="btn">
+
+            </form>
+        </div>
+
+        <!--Display when the food will be ready-->
+        <h3>Your food will be ready On:</h3>
+        <span id='ct' > </span>
+        <script>
+            document.write(displayTime());
+        </script>
+        
+           
+
+      
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+
+
+
+@media screen and (min-width: 1015px), print{
+    body{
+        background-color: rgb(173, 76, 76);
+    }
+
+    .form-grid{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+    }
+
+    form{
+        width: auto;
+    }
+
+    .btn{
+        grid-column: 1 / span 1;
+    }
+
+    .tablet-desktop{
+        display: block;
+    }
+
+    .tablet-desktop li{
+        display: none;
+    }
+
+    nav{
+        float: right;
+        width: 70%;
+    }
+
+    
+    nav ul{
+        text-align: right;
+    }
+
+    nav li{
+        border: none;
+        list-style-type: none;
+        display: inline;
+        float: center;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        
+
+    }
+
+    nav li a{
+        color: rgb(224, 224, 102);
+
+    }
+
+    #money li{
+        list-style-type: none;
+        display: inline;
+    }
+
+    #tip li{
+        list-style-type: none;
+        color: rgb(224, 224, 102);;
+        display: inline;
+    }
+}
