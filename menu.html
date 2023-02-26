@@ -18,5 +18,47 @@
             </div>
         </nav>
     </body>
+    
+    <ul id="menu-list"></ul>
+
+    <script>
+      const menu = [
+        {
+          name: 'Traditional Pho',
+          description: 'Beef broth, rice noodles, beef slices, and herbs.',
+          price: 15.00
+        },
+        {
+          name: 'Vegetable Pho',
+          description: 'Vegetable broth, rice noodles, tofu, and vegetables.',
+          price: 13.00
+        },
+        {
+          name: 'Chicken Pho',
+          description: 'Chicken broth, rice noodles, chicken slices, and herbs.',
+          price: 14.00
+        },
+        {
+          name: 'Seafood Pho',
+          description: 'Seafood broth, rice noodles seafood, and vegetables.',
+          price: 16.00
+        },
+        {
+          name: 'Spicy Pho',
+          description: 'Spicy broth, rice noodles, beef noodles, beef slices, and herbs.',
+          price: 15.00
+        }
+      ];
+
+      const menuList = document.getElementById('menu-list');
+
+      for (let i = 0; i < menu.length; i++) {
+        const menuItem = menu[i];
+        const li = document.createElement('li');
+        const itemInfo = document.createTextNode(menuItem.name + ': ' + menuItem.description + ' - $' + menuItem.price.toFixed(2));
+        li.appendChild(itemInfo);
+        menuList.appendChild(li);
+      }
+    </script>
 
 </html>
